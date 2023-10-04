@@ -1,0 +1,43 @@
+.results-list{
+    width:100%;
+    background-color: white;
+    display: flex;
+    flex-direction:column;
+    box-shadow:0px 0px 8px #ddd;
+    border-radius: 10px;
+    margin-top: 2rem;
+    max-height: 300px;
+    overflow-y: scroll;
+    /* text-align: center; */
+    padding: 1rem;
+}
+.phonetic {
+    font-style: italic;
+}
+
+.part-of-speech {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.definition {
+    margin-left: 1rem;
+}
+
+.example {
+    margin-left: 1rem;
+    font-style: italic;
+    color: #888;
+}
+.show-more-button, .show-less-button {
+    background-color: #5091df;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    align-self: center;
+    margin-top: 1rem;
+
+}
