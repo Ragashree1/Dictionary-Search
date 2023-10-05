@@ -1,0 +1,29 @@
+.overlay {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlay span {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.overlay span:hover {
+    background-color: #f5f5f5;
+}
+
+p{
+display: flex;
+align-items: center;
+ color: rgb(107, 106, 106);
+ text-align: left;
+ margin-left: 0;
+ padding-left: 0;
+ margin-inline-start: 0px;
+}

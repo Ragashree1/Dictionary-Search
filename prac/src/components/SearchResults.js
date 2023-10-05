@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './SearchResults.css';
 
 
-export const SearchResults = ({ results }) => {
+export function SearchResults({ results }) {
     const [showAllDefinitions, setShowAllDefinitions] = useState(false);
 
-    if (!results || results.length === 0) {
+    if (!results || results.length === 0 || !results[0].word) {
         return <div></div>;
     }
 

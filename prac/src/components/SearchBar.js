@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {FaSearch} from "react-icons/fa"
+import React, { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
 import "./SearchBar.css"
 
-
+export let dictionary = JSON.parse(sessionStorage.getItem('dictionary')) || {};
 
 export const SearchBar = ({ setResults }) => {
     const [input, setInput] = useState('');
@@ -18,7 +18,12 @@ export const SearchBar = ({ setResults }) => {
     };
 
     const handleSearch = () => {
-        fetchData(input); // Pass input value to fetchData
+        if (input in dictionary) {
+            setResults(dictionary[input]);
+        } else {
+            fetchData(input);
+        }
+        setInput('');
     };
 
     const fetchData = (input) => {
@@ -26,18 +31,20 @@ export const SearchBar = ({ setResults }) => {
         fetch(url)
             .then((response) => response.json())
             .then((json) => {
-                console.log("API Respnse:", json);
-                const results = json[0].meanings.map((meaning) => {
-                    return {
-                        definition: meaning.definitions[0].definition
-                    };
-                });
-                setResults(json);
+                if(json.length > 0){
+                    setResults(json);
+                    dictionary[input] = json;
+                }else{
+                    setResults("")
+                }
+                sessionStorage.setItem('dictionary', JSON.stringify(dictionary))
+                
             })
             .catch((error) => {
-                console.error("Error fetching data:", error);
+                console.error('Error fetching data:', error);
+                
             });
-    };   
+    };
 
     return (
         <div className='input-wrapper'>

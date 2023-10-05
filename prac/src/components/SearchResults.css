@@ -39,5 +39,7 @@
     margin: 0 10px;
     align-self: center;
     margin-top: 1rem;
+    margin: 1rem auto; /* This centers the buttons horizontally */
+    display: block; 
 
 }
