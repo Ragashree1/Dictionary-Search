@@ -21,10 +21,9 @@ This is a simple dictionary app built with React. It allows users to search for 
 
 ## Usage
 
-1. Go inside the main directory (prac)
-2. Start the development server: `npm start`
-3. Open your browser and visit `http://localhost:3000`
-4. Enter a word in the search bar and press Enter to see the results.
+1. Start the development server: `npm start`
+2. Open your browser and visit `http://localhost:3000`
+3. Enter a word in the search bar and press Enter to see the results.
 
 ## License
 
