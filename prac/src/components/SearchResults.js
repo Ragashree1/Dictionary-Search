@@ -16,8 +16,9 @@ export function SearchResults({ results }) {
             {showAllDefinitions
                 ? results.map((result, id) => (
                       <div key={id}>
-                          <div className="word">{id + 1}. {result.word}</div>
+                          <div className="word"><b>{id + 1}. {result.word}</b></div>
                           <div className="phonetic">{result.phonetic}</div>
+                          <hr/>
                           {result.meanings.map((meaning, idx) => (
                               <div key={idx}>
                                   <div className="part-of-speech">{meaning.partOfSpeech}</div>
@@ -34,8 +35,9 @@ export function SearchResults({ results }) {
                   ))
                 : (
                     <div key="1">
-                        <div className="word">{results[0].word}</div>
+                        <div className="word"><b>{results[0].word}</b></div>
                         <div className="phonetic">{results[0].phonetic}</div>
+                        <hr/>
                         {results[0].meanings.map((meaning, idx) => (
                             <div key={idx}>
                                 <div className="part-of-speech">{meaning.partOfSpeech}</div>

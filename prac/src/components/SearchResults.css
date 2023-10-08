@@ -13,10 +13,12 @@
 }
 .phonetic {
     font-style: italic;
+    margin-bottom: 7px;
 }
 
 .part-of-speech {
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-style: italic; 
     margin-top: 0.5rem;
 }
 
@@ -42,4 +44,8 @@
     margin: 1rem auto; /* This centers the buttons horizontally */
     display: block; 
 
+}
+.word{
+    
+    text-transform: capitalize; 
 }

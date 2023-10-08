@@ -28,6 +28,7 @@ export const SearchBar = ({ setResults }) => {
 
     const fetchData = (input) => {
         const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${input}`;
+        
         fetch(url)
             .then((response) => response.json())
             .then((json) => {
@@ -41,9 +42,11 @@ export const SearchBar = ({ setResults }) => {
                 
             })
             .catch((error) => {
-                console.error('Error fetching data:', error);
+                console.log('Error fetching data:', error);
                 
+                setResults("")
             });
+        
     };
 
     return (
