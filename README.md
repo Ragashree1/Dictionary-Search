@@ -1,6 +1,6 @@
 # React Dictionary App
 
-This is a simple dictionary app built with React. It allows users to search for word definitions, synonyms, antonyms, and translations in multiple languages.
+This is a simple dictionary app built with React. It allows users to search for word definitions, and preview searches.
 
 ## Features
 
