@@ -20,7 +20,7 @@ This is a simple dictionary app built with React. It allows users to search for 
 3. Install dependencies: `npm install` (if not already installed)
 4. Start the development server: `npm start`
 5. Open your browser and visit `http://localhost:3000`
-6. Enter a word in the search bar and press Enter to see the results.
+6. Enter a word in the search bar and press enter key/search icon to see the results.
 
 ## Challenges Faced
 I faced initial challenges while learning React, spending a week to understand components, JSX rendering, and state management. Transitioning from Python's event listeners to React's synthetic events was a learning curve. Implementing search history was tricky, but research helped me grasp local and session storage, ultimately choosing session storage for the feature.
